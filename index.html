@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <!-- Navigation Header -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="#" class="brand-logo">
@@ -20,16 +21,17 @@
                 <a href="#regions">Regions</a>
                 <a href="#news">News & Guides</a>
             </nav>
-            <div class="nav-badge">
-                <span>Public Domain Data</span>
+            <div class="nav-btn-wrapper">
+                <a href="#search" class="btn-primary">Find an Airport</a>
             </div>
         </div>
     </header>
 
-    <section class="hero">
+    <!-- Hero / Search Section -->
+    <section class="hero" id="search">
         <div class="container hero-container">
             <h1>Your Complete Guide to 10,000+ Airports Worldwide</h1>
-            <p>Clean, professional, and public-domain data updated daily.</p>
+            <p>Clean, reliable airport guides, terminal specs, and flight navigation info.</p>
             
             <div class="search-box">
                 <input type="text" id="searchInput" placeholder="Search by airport name, IATA code (e.g. JFK), or city...">
@@ -46,8 +48,10 @@
         </div>
     </section>
 
+    <!-- Content Sections -->
     <main class="container">
         
+        <!-- Region Browser -->
         <section id="regions" class="section">
             <h2>Browse by Region</h2>
             <div class="grid grid-regions">
@@ -59,23 +63,28 @@
             </div>
         </section>
 
+        <!-- Dynamic Airport Grid -->
         <section class="section">
             <h2 id="airportGridTitle">Featured Airport Guides</h2>
             <div id="airportGrid" class="grid grid-airports"></div>
         </section>
 
+        <!-- News & Updates -->
         <section id="news" class="section">
-            <h2>Latest Airport News & Guides</h2>
+            <h2>Latest Airport News & Reviews</h2>
             <div id="newsGrid" class="grid grid-news"></div>
         </section>
 
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container footer-container">
-            <p>&copy; 2026 airportguidebook.com — Open Data Portal</p>
+            <p>&copy; 2026 airportguidebook.com — All Rights Reserved</p>
             <div class="footer-links">
-                <a href="https://github.com" target="_blank">GitHub Repository</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
             </div>
         </div>
     </footer>
