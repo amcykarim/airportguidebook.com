@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Guidebook - Your Complete Guide to Airports Worldwide</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.7 5.2c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg>
+                <span>Airport Guidebook</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#regions">Regions</a>
+                <a href="#news">News & Guides</a>
+            </nav>
+            <div class="nav-badge">
+                <span>Public Domain Data</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-container">
+            <h1>Your Complete Guide to 10,000+ Airports Worldwide</h1>
+            <p>Clean, professional, and public-domain data updated daily.</p>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by airport name, IATA code (e.g. JFK), or city...">
+                <div id="searchResults" class="search-dropdown"></div>
+            </div>
+
+            <div class="quick-tags">
+                Popular searches: 
+                <button onclick="setSearch('LHR')">LHR</button>
+                <button onclick="setSearch('DXB')">DXB</button>
+                <button onclick="setSearch('SIN')">SIN</button>
+                <button onclick="setSearch('Atlanta')">Atlanta</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <section id="regions" class="section">
+            <h2>Browse by Region</h2>
+            <div class="grid grid-regions">
+                <div class="card region-card" onclick="filterRegion('Europe')"><h3>Europe</h3></div>
+                <div class="card region-card" onclick="filterRegion('North America')"><h3>North America</h3></div>
+                <div class="card region-card" onclick="filterRegion('Asia')"><h3>Asia-Pacific</h3></div>
+                <div class="card region-card" onclick="filterRegion('South America')"><h3>Latin America</h3></div>
+                <div class="card region-card" onclick="filterRegion('Africa')"><h3>Africa & Middle East</h3></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 id="airportGridTitle">Featured Airport Guides</h2>
+            <div id="airportGrid" class="grid grid-airports"></div>
+        </section>
+
+        <section id="news" class="section">
+            <h2>Latest Airport News & Guides</h2>
+            <div id="newsGrid" class="grid grid-news"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2026 airportguidebook.com — Open Data Portal</p>
+            <div class="footer-links">
+                <a href="https://github.com" target="_blank">GitHub Repository</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
